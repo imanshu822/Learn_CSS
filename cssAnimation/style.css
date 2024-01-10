@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 300px;
+  height: 300px;
+  border: 2px dotted red;
+  border-radius: 50%;
+
+  animation-name: circle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(104, 104, 182);
+  border-radius: 50%;
+
+  /* animation-name: circle; */
+  /* animation-duration: 1s; */
+  /* animation-delay: 2s; */
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: reverse; */
+  /* animation: circle 3s reverse infinite normal; */
+}
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 
+@keyframes circle {
+  0%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(0px, 200px);
+  }
+  50% {
+    transform: translate(200px, 200px);
+  }
+  75% {
+    transform: translate(200px, 0px);
+  }
+} */
+
+ul {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  gap: 20px;
+}
+li {
+  font-size: 2rem;
+  padding: 8px 10px;
+  color: blue;
+  animation: google 0.8s ease infinite alternate;
+}
+li:nth-child(2) {
+  color: red;
+  animation-delay: 0.1s;
+}
+li:nth-child(3) {
+  color: yellow;
+  animation-delay: 0.2s;
+}
+li:nth-child(4) {
+  color: green;
+  animation-delay: 0.3s;
+}
+@keyframes google {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}
